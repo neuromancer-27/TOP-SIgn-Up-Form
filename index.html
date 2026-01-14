@@ -3,32 +3,107 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body>
-    <div class="left-container">
-      <div class="signature">
-        <img src="/sign.svg" alt="Thorin's sign" width="50" />
-        <h1>Thorin Oakenshield</h1>
+    <div class="main-container">
+      <div class="left-container">
+        <div class="bg-img"></div>
+        <div class="logo">
+          <h1>Thorin Oakenshield</h1>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-top">
+          <h2>Deed of Contract for Burglar Bilbo Baggins</h2>
+          <p>
+            Cash on delivery, up to and not exceeding one fourteenth of the
+            total profits (if any); all traveling expenses guaranteed in any
+            event; funeral expense to be defrayed by us or our representatives;
+            if occasion arises and the matter is not otherwise arranged for.
+          </p>
+        </div>
+
+        <div class="form-main">
+          <form action="/submit-path" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">GIVEN NAME OF THE BURGLAR*</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  placeholder="Samwise"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="last-name">FAMILY NAME & LINEAGE*</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  placeholder="Gamgee"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">MEANS OF CORRESPONDENCE</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="frodoBaggins@bagend.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="tel">EMERGENCY CONTACT</label>
+                <input
+                  type="tel"
+                  id="tel"
+                  name="telephone"
+                  placeholder="For mishaps & misadventures"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="password">SECRET SEAL</label>
+                <input type="password" id="password" name="password" required />
+              </div>
+              <div class="form-group">
+                <label for="cfrm-pass">CONFIRM SEAL</label>
+                <input
+                  type="password"
+                  id="cfrm-pass"
+                  name="confirm-pass"
+                  required
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Sign Contract</button>
+          </form>
+        </div>
+
+        <div class="form-bottom">
+          <p>
+            Adventure undertaken entierly at the Burglar's own risk. Present
+            company shall not be liable for injuries inflicted by or sustained
+            as a consequence thereof; including, but not limited to lacerations,
+            evisceration, incineration
+          </p>
+          <p>SIGNED : Thorin son of Thrain</p>
+          <p>WITNESSED : Balin son of FUNDIN</p>
+          <p>BURGLAR : Bilbo Baggins</p>
+        </div>
       </div>
     </div>
-
-    <h2>Deed of Contract for Burglar Bilbo Baggins</h2>
-    <p>
-      Cash on delivery, up to and not exceeding one fourteenth of the total
-      profits (if any); all traveling expenses guaranteed in any event; funeral
-      expense to be defrayed by us or our representatives; if occasion arises
-      and the matter is not otherwise arranged for.
-    </p>
-
-    <p>
-      Adventure undertaken entierly at the Burglar's own risk. Present company
-      shall not be liable for injuries inflicted by or sustained as a
-      consequence thereof; including, but not limited to lacerations,
-      evisceration, incineration
-    </p>
-    <p>SIGNED : Thorin son of Thrain</p>
-    <p>WITNESSED : Balin son of FUNDIN</p>
-    <p>BURGLAR : Bilbo Baggins</p>
   </body>
 </html>
