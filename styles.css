@@ -23,12 +23,6 @@ body {
   position: relative;
 }
 
-.form-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
 .bg-img {
   position: absolute;
   inset: 0;
@@ -60,3 +54,9 @@ body {
 }
 
 /* right panel */
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
