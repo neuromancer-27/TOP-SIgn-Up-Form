@@ -20,10 +20,11 @@
         <div class="form-top">
           <h2>Deed of Contract for Burglar Bilbo Baggins</h2>
           <p>
-            Cash on delivery, up to and not exceeding one fourteenth of the
-            total profits (if any); all traveling expenses guaranteed in any
-            event; funeral expense to be defrayed by us or our representatives;
-            if occasion arises and the matter is not otherwise arranged for.
+            Cash on delivery, up to and not exceeding <b>one fourteenth</b> of
+            the total profits (<em>if any</em>); all traveling expenses
+            guaranteed in any event; funeral expense to be defrayed by us or our
+            representatives; if occasion arises and the matter is not otherwise
+            arranged for.
           </p>
         </div>
 
@@ -40,14 +41,13 @@
                   required
                 />
               </div>
-              <div class="form-bottom">
+              <div class="form-group">
                 <label for="last-name">FAMILY NAME & LINEAGE*</label>
                 <input
                   type="text"
                   id="last-name"
                   name="last-name"
                   placeholder="Gamgee"
-                  required
                 />
               </div>
             </div>
@@ -60,6 +60,7 @@
                   id="email"
                   name="email"
                   placeholder="frodoBaggins@bagend.com"
+                  required
                 />
               </div>
               <div class="form-group">
@@ -76,7 +77,14 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="password">SECRET SEAL</label>
-                <input type="password" id="password" name="password" required />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+"
+                  placeholder="eg: ThereBackAgain1"
+                />
               </div>
               <div class="form-group">
                 <label for="cfrm-pass">CONFIRM SEAL</label>
@@ -85,8 +93,14 @@
                   id="cfrm-pass"
                   name="confirm-pass"
                   required
+                  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+"
+                  placeholder="ThereBackAgain1"
                 />
               </div>
+            </div>
+
+            <div class="pass-instruc">
+              <em>should have atleast one Upper, one Lower and one Digit.</em>
             </div>
 
             <button type="submit" class="btn-submit">Sign Contract</button>
@@ -96,13 +110,19 @@
         <div class="form-bottom">
           <p>
             Adventure undertaken entierly at the Burglar's own risk. Present
-            company shall not be liable for injuries inflicted by or sustained
-            as a consequence thereof; including, but not limited to lacerations,
-            evisceration, incineration
+            company <em>shall not</em> be liable for injuries inflicted by or
+            sustained as a consequence thereof; including, but not limited to
+            <b>lacerations</b>, <b>evisceration</b>, <b>incineration</b>.
           </p>
-          <p>SIGNED : Thorin son of Thrain</p>
-          <p>WITNESSED : Balin son of FUNDIN</p>
-          <p>BURGLAR : Bilbo Baggins</p>
+          <p>
+            SIGNED :
+            <span style="font-style: italic">Thorin son of Thrain</span>
+          </p>
+          <p>
+            WITNESSED :
+            <span style="font-style: italic">Balin son of Fundin</span>
+          </p>
+          <p>BURGLAR : <span style="font-style: italic">Bilbo Baggins</span></p>
         </div>
       </div>
     </div>
