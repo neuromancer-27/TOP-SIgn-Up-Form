@@ -1,4 +1,13 @@
 /* main styling */
+@font-face {
+  font-family: "middle-earth";
+  src:
+    url(fonts/middleearth.woff2) format(woff2),
+    url(fonts/middleearth.woff) format(woff);
+  font-style: normal;
+  font-weight: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +16,13 @@
 
 body {
   font-family: "Georgia", serif;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
 }
 
 .main-container {
   display: flex;
   min-height: 100vh;
-  /* gap: 10px; */
 }
 
 /* left panel */
@@ -40,21 +48,21 @@ body {
   align-items: center;
   gap: 1rem;
   width: clamp(16rem, 100%, 40rem);
-  /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 .logo img {
   width: clamp(4rem, 30%, 8rem);
-  /* color: rgb(255, 253, 229); */
 }
 
 .logo h1 {
   color: rgb(255, 255, 255);
-  font-size: clamp(1.2rem, 3vw, 3rem);
+  font-size: clamp(1.2rem, 2.5vw, 3rem);
 }
 
 /* right panel */
-.form-section {
+.right-container {
+  display: flex;
+  flex-direction: column;
   /* paper texture */
   background-color: #f6f3ee;
   background-image:
@@ -66,16 +74,16 @@ body {
   box-shadow:
     inset 0 0 60px rgba(0, 0, 0, 0.04),
     0 2px 8px rgba(0, 0, 0, 0.06);
+}
 
-  margin-left: -2vw;
-  position: relative;
-  z-index: 2;
-  font-size: 1.3rem;
+.form-section {
+  font-size: 1.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 2vw;
+  overflow: visible;
 }
 
 .form-top {
@@ -85,7 +93,9 @@ body {
 }
 
 .form-main {
-  font-size: 0.7em;
+  font-size: 0.8em;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 form {
@@ -93,16 +103,14 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: #f7f1e8;
-  border: 0.01px;
+  background-color: #f7efe3;
   gap: 10px;
-  padding: 20px 0px 20px 0px;
-  box-shadow: 0 3px 3px 4px rgba(0, 0, 0, 0.1);
+  padding: 2vw;
 }
 
 .form-row {
   display: flex;
-  gap: 50px;
+  gap: 7vw;
 }
 
 .form-group {
@@ -118,7 +126,6 @@ form {
 
 input {
   width: 400px;
-  /* box-sizing: border-box; */
   padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -128,7 +135,7 @@ input {
 input:focus {
   outline: none;
   border-color: blue;
-  box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 input[type="password"]:not(:placeholder-shown):invalid {
@@ -136,7 +143,7 @@ input[type="password"]:not(:placeholder-shown):invalid {
   border-color: red;
 }
 
-input[type="password"]:not(:placeholder-shown):invalid {
+input[type="password"]:not(:placeholder-shown):valid {
   outline: none;
   border-color: #596d48;
 }
@@ -148,6 +155,6 @@ button {
   color: #f6f3ee;
   border: none;
   border-radius: 5px;
-  width: 20vw;
+  width: 15vw;
   height: 5vh;
 }
