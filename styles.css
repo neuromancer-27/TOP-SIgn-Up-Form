@@ -1,13 +1,4 @@
 /* main styling */
-@font-face {
-  font-family: "middle-earth";
-  src:
-    url(fonts/middleearth.woff2) format(woff2),
-    url(fonts/middleearth.woff) format(woff);
-  font-style: normal;
-  font-weight: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +6,7 @@
 }
 
 body {
-  font-family: "Georgia", serif;
+  font-family: "Georgia", serif, "Times New Romans";
   min-height: 100vh;
   display: flex;
 }
